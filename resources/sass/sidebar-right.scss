@@ -1,0 +1,125 @@
+.sidebar-right-item-container {
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 15px;
+
+    .office-button-primary-full-width {
+        @include button-primary;
+
+        display: block;
+    }
+
+    .sidebar-right-item-header {
+        font-size: 18px;
+        color: #fff;
+        background: $primaryColor;
+        padding: 8px;
+        font-weight: 500;
+    }
+
+    .sidebar-right-list-container {
+        border: 1px solid #ddd;
+
+        .sidebar-right-list-item {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.2s;
+            border-bottom: 1px solid #ddd;
+
+            &:hover {
+                background: #eee;
+            }
+
+            &:last-child {
+                border: none;
+            }
+
+            .sidebar-right-list-item-link {
+                display: block;
+                padding: 8px;
+                font-size: 13px;
+
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+
+            .sidebar-right-item-overlay-container {
+                position: absolute;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                background: #eee;
+                color: $primaryColor;
+            }
+        }
+    }
+
+    .sidebar-right-conversation-container {
+        border: 1px solid #ddd;
+
+        .sidebar-right-messages-wrapper {
+            height: 500px;
+            overflow: auto;
+            padding: 15px;
+            position: relative;
+            border-bottom: 1px solid #ddd;
+
+            .conversation-message {
+                font-size: 11px;
+                border: 1px solid #ddd;
+                padding: 8px;
+                border-radius: 22px;
+                width: 80%;
+                margin-bottom: 25px;
+                position: relative;
+
+                .message-author {
+                    font-weight: 500;
+                    font-size: 13px
+                }
+
+                .message-body {
+                    padding: 8px 0;
+                }
+
+                .message-date {
+                    font-size: 9px;
+                    text-align: right;
+                }
+
+                .new-message-badge-container {
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+
+                    .office-badge-button {
+                        border: none;
+                        background: #914040;
+                        display: flex;
+                        height: 26px;
+                        width: 26px;
+                        align-items: center;
+                        justify-content: center;
+                        color: #f9f9f9;
+                        border-radius: 100%;
+                    }
+                }
+            }
+            .message-left {
+                box-shadow: -1px 1px 3px #ddd;
+            }
+            .message-right {
+                box-shadow: 1px 1px 3px #ddd;
+                margin-left: auto;
+            }
+        }
+        .send-messages-container {
+            padding: 15px;
+
+            #message {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

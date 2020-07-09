@@ -1,0 +1,92 @@
+// Colors
+$primaryColor: #30302f;
+
+$headerColor: #333;
+$textColor: #777;
+$secondaryColor: #b0b0b0;
+
+$dangerDarkColor: #914040;
+$dangerLightColor: #ffe0e0;
+$dangerFillColor: #ffd1d1;
+
+$warningDarkColor: #806612;
+$warningLightColor: #fff7de;
+$warningFillColor: #ffefbd;
+
+$goodDarkColor: #438222;
+$goodLightColor: #e6ffd9;
+$goodFillColor: #bcff99;
+
+// Mixins
+@mixin content-body {
+    background: #fff;
+    padding: 15px;
+}
+
+@mixin button-primary {
+    background: $primaryColor;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+
+    &:hover {
+        background: $secondaryColor;
+        color: $primaryColor;
+    }
+}
+
+@mixin button-secondary {
+    background: $secondaryColor;
+    color: $primaryColor;
+    display: inline-block;
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+
+    &:hover {
+        background: $primaryColor;
+        color: $secondaryColor;
+    }
+}
+
+@mixin button-danger {
+    background: $dangerDarkColor;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+
+    &:hover {
+        background: $dangerFillColor;
+        color: $dangerDarkColor;
+    }
+}
+
+@mixin button-good {
+    background: $goodDarkColor;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+
+    &:hover {
+        background: $goodFillColor;
+        color: $goodDarkColor;
+    }
+}

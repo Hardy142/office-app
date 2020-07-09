@@ -1,0 +1,219 @@
+/***   General Table   ***/
+.office-table {
+                    
+    .office-table-projects-header{
+        width: 280px;
+    }
+
+    .office-row-selectable {
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background: #fdfdfd;
+        }
+
+        td {
+            vertical-align: middle;
+            font-size: 15px;
+            transition: all 0.2s;
+
+            .user-project-progress {
+                border-radius: 22px;
+                padding: 9px 15px;
+                font-size: 12px;
+                font-weight: 600;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                transition: all 0.5s;
+                margin-left: auto;
+
+                .user-project-data {
+                    position: relative;
+                    z-index: 100;
+                    transition: all 0.2s;
+                }
+
+                .user-project-progress-fill {
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transition: all 5s ease-out;
+                    width: 0%;
+                }
+            }
+
+            .user-project-progress-danger {
+                background: $dangerLightColor;
+
+                span {
+                    color: $dangerDarkColor;
+                }
+
+                .user-project-progress-fill {
+                    background: $dangerFillColor;
+                }
+            }
+
+            .user-project-progress-warning {
+                background: $warningLightColor;
+
+                span {
+                    color: $warningDarkColor;
+                }
+
+                .user-project-progress-fill {
+                    background: $warningFillColor;
+                }
+            }
+
+            .user-project-progress-good {
+                background: $goodLightColor;
+
+                span {
+                    color: $goodDarkColor;
+                }
+
+                .user-project-progress-fill {
+                    background: $goodFillColor;
+                }
+            }
+
+            .office-progress-container {
+                border-radius: 22px;
+                padding: 9px 15px;
+                font-size: 12px;
+                font-weight: 600;
+                position: relative;
+                overflow: hidden;
+                max-width: 280px;
+                text-align: center;
+                background: #e8e8e8;
+                transition: all 0.2s;
+                margin-left: auto;
+                
+                span {
+                    position: relative;
+                    z-index: 100;
+                    transition: all 0.2s;
+                }
+                
+                .office-progress-fill {
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transition: all 1s ease-out;
+                    width: 0%;
+                    background: #dbdbdb;
+                    transition: all 0.5s;
+                }
+            }
+
+            .user-assigned-col-container {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .user-assigned-col-avatar {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 6px;
+                    background-position: center !important;
+                    background-size: cover !important;
+                    background-repeat: no-repeat !important;
+                }
+
+                .user-assigned-col-name {
+                    font-size: 13px;
+                    padding-left: 10px;
+                }
+            }
+
+            .office-progress-container-danger {
+                background: $dangerLightColor;
+
+                span {
+                    color: $dangerDarkColor;
+                }
+            }
+
+            .office-progress-container-warning {
+                background: $warningLightColor;
+
+                span {
+                    color: $warningDarkColor;
+                }
+            }
+
+            .office-progress-container-good {
+                background: $goodLightColor;
+
+                span {
+                    color: $goodDarkColor;
+                }
+            }
+
+            .office-progress-complete {
+                
+                span {
+                    color: #fff !important;
+                }
+                .office-progress-fill {
+                    background: $goodFillColor !important;
+                }
+            }
+        }
+
+        .office-table-col-progress {
+            text-align: right;
+        }
+        
+        .office-table-avatar-col {
+            width: 60px;
+
+            img {
+                width: 50px;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+/***   Dashboard / Archives Table   ***/
+.table-dashboard {
+    border: 1px solid #ddd !important;
+
+    td, th {
+        font-size: 11px;
+        vertical-align: middle;
+    }
+
+    th {
+        font-size: 13px;
+    }
+
+    .office-row-selectable {
+        transition: all 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            background: #fff;
+        }
+    }
+
+    .table-dashboard-icon-col {
+        width: 100px;
+        text-align: center;
+
+        .dashboard-user-table-icon {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+            background: $goodDarkColor;
+        }
+    }
+}

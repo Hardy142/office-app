@@ -1,0 +1,479 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+// Variables
+@import 'variables';
+@import 'login';
+@import 'archives-dashboard';
+@import 'sidebar';
+@import 'sidebar-right';
+@import 'tables';
+
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $headerColor;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 27px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+a {
+    color: $primaryColor;
+
+    &:hover {
+        text-decoration: none;
+        color: secondaryColor;
+    }
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=date], textarea, select {
+    border-radius: 0 !important;
+    font-size: 14px !important;
+}
+
+textarea {
+    min-height: 160px;
+}
+
+.office-button-primary {
+    @include button-primary;
+    display: block;
+    width: 100%;
+}
+
+.office-button-primary-auto-width {
+    @include button-primary;
+}
+
+.office-button-secondary {
+    @include button-secondary;
+    display: block;
+    width: 100%;
+}
+
+.office-button-secondary-auto-width {
+    @include button-secondary;
+}
+
+.office-button-danger {
+    @include button-danger;
+}
+
+.office-button-danger-full-width {
+    @include button-danger;
+    display: block;
+    width: 100%;
+}
+
+.office-button-good {
+    @include button-good;
+    display: block;
+    width: 100%;
+}
+
+.error-container {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: $dangerDarkColor;
+    background: $dangerLightColor;
+    border-bottom: 1px solid $dangerDarkColor;
+    font-size: 13px;
+    font-weight: 500;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/****   Pagination   ****/
+.pagination {
+    margin: 15px 0 0 0;
+    justify-content: center;
+
+    li.active {
+
+        span {
+            background: $primaryColor !important;
+            border-color: $primaryColor !important;
+        }
+    }
+    li.page-item {
+        
+        a {
+            color: $primaryColor;
+        }
+    }
+}
+
+body {
+    background: #fff;
+    color: $textColor;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    .app-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Poppins';
+    
+        .sidebar-container {
+            flex: 1;
+            min-height: 100vh;
+            max-width: 200px;
+            transition: all 0.4s;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s;
+            overflow: hidden;
+        }
+
+        .sidebar-container-collapsed {
+            max-width: 40px;
+        }
+        
+        .content-container {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+
+            .main-content-wrapper {
+                flex: 1;
+                
+                .main-content-header {
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: $primaryColor;
+                    margin-bottom: 15px;
+                }
+
+                .user-single-avatar-container {
+                    margin: 25px 0;
+
+                    .user-single-avatar {
+                        height: 120px;
+                        width: 120px;
+                        border-radius: 6px;
+                        background-size: cover !important;
+                        background-position: center !important;
+                        background-repeat: no-repeat !important;
+                    }
+                }
+
+                .sub-information-container {
+                    padding: 15px;
+                    margin: 15px 0;
+                    background: #f8f8f8;
+                    border-top: 2px solid #777;
+                    border-bottom: 2px solid #777;
+
+                    .sub-info-flex-container {
+                        display: flex;
+                        padding: 10px 0;
+
+                        .sub-info-icon {
+                            width: 30px;
+                            margin-right: 8px;
+                            padding-right:15px;
+                            border-right:2px solid #777;
+                            display: flex;
+                            align-items: center;
+                            font-size: 16px;
+                            color: $primaryColor;
+
+                            a:hover {
+                                color: $primaryColor;
+                            }
+                        }
+
+                        .sub-info-text {
+                            color: $primaryColor;
+                            font-weight: 500;
+
+                            a:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+
+                .project-single-upload-wrapper {
+
+                    .project-single-upload-list-container {
+                        border-top: 1px solid #ddd;
+                        border-left: 1px solid #ddd;
+                        border-right: 1px solid #ddd;
+                        display: flex;
+                        flex-direction: column;
+
+                        .project-single-upload-list-item {
+                            padding: 8px;
+                            font-size: 15px;
+                            border-bottom: 1px solid #ddd;
+                        }
+                    }
+
+                    .project-single-upload-btn-container {
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                .office-upload-container {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 9999;
+                    background: rgba(0,0,0,0.7);
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.2s;
+                }
+
+                .office-upload-container-open {
+                    display: flex;
+                }
+
+                .sub-content-header {
+                    font-size: 19px;
+                    font-weight: 500;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                    color: $primaryColor;
+                }
+
+                .office-accordion-wrapper {
+                    border: 1px solid #eee;
+
+                    .office-accordion-item {
+                        border-bottom: 1px solid #eee;
+
+                        .office-accordion-header {
+                            display: flex;
+                            flex-wrap: wrap;
+                            cursor: pointer;
+
+                            .archives-badge {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                span {
+                                    padding: 6px 12px;
+                                    margin-right: 15px;
+                                    background: #f9f9f9;
+                                    border: 1px solid #ddd;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    border-radius: 24px;
+                                    min-width: 34px;
+                                    color: #777 !important;
+                                }
+                            }
+
+                            .office-accordion-header-text {
+                                flex: 1;
+                                padding: 8px 15px;
+                                display: flex;
+                                align-items: center;
+                                transition: all 0.3s;
+                                font-size: 16px;
+                                font-weight: 600;
+                            }
+
+                            .office-accordion-header-progress-container {
+                                flex: 1;
+                                padding: 8px 15px;
+                                max-width: 280px;
+
+                                .user-project-progress {
+                                    border-radius: 22px;
+                                    padding: 9px 15px;
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    position: relative;
+                                    overflow: hidden;
+                                    text-align: center;
+                                    transition: all 0.5s;
+                                    margin-left: auto;
+
+                                    .user-project-data {
+                                        position: relative;
+                                        z-index: 100;
+                                        transition: all 0.2s;
+                                    }
+
+                                    .user-project-progress-fill {
+                                        position: absolute;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        transition: all 5s ease-out;
+                                        width: 0%;
+                                    }
+                                }
+
+                                .user-project-progress-danger {
+                                    background: $dangerLightColor;
+
+                                    span {
+                                        color: $dangerDarkColor;
+                                    }
+
+                                    .user-project-progress-fill {
+                                        background: $dangerFillColor;
+                                    }
+                                }
+
+                                .user-project-progress-warning {
+                                    background: $warningLightColor;
+
+                                    span {
+                                        color: $warningDarkColor;
+                                    }
+
+                                    .user-project-progress-fill {
+                                        background: $warningFillColor;
+                                    }
+                                }
+
+                                .user-project-progress-good {
+                                    background: $goodLightColor;
+
+                                    span {
+                                        color: $goodDarkColor;
+                                    }
+
+                                    .user-project-progress-fill {
+                                        background: $goodFillColor;
+                                    }
+                                }
+                            }
+                        }
+
+                        .office-accordion-header-text-active {
+                            background: #777;
+                            color: #fff;
+                        }
+
+                        .office-accordion-content {
+                            padding: 15px;
+                            display: none;
+                            background: #fdfdfd;
+                            font-size: 14px;
+
+                            .accordion-button-container {
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+                }
+
+                .settings-profile-avatar {
+                    width: 180px;
+                    position: relative;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    .user-settings-icon {
+                        width: 180px;
+                        height: 180px;
+                        background-repeat: no-repeat !important;
+                        background-position: center !important;
+                        background-size: cover !important;
+                    }
+
+                    .upload-overlay {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        top: 100%;
+                        left: 0;
+                        background: rgba(255,255,255,0.9);
+                        font-weight: 600;
+                        transition: all 0.3s;
+                        color: $primaryColor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .sidebar-right-container {
+                flex: 1;
+                max-width: 360px;
+                background: #f7f7f7;
+                padding: 15px;
+                margin-left: 30px;
+            }
+
+            .office-upload-container {
+                position: fixed;
+                background: #eee;
+                bottom: 0;
+                right: 0;
+                padding: 15px;
+                margin: 0 15px 15px 0;
+                border: 1px solid #ddd;
+                box-shadow: 1px 2px 3px #ddd;
+                transform-origin: bottom right;
+                transform: scale( 0 );
+                transition: all 0.3s;
+
+                .dropzone {
+                    border: 2px dashed rgba(0, 0, 0, 0.3) !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .office-upload-container-active {
+                transform: scale(1);
+            }
+        }
+    }
+}

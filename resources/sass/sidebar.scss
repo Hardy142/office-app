@@ -1,0 +1,98 @@
+.sidebar-container {
+    background: #30302f;
+
+    .sidebar-menu {
+
+        .sidebar-dropdown {
+            background: #40403f;
+            display: none;
+
+            .sidebar-dropdown-item {
+                color: #f9f9f9;
+                padding: 6px 6px 6px 50px;
+                font-size: 13px;
+                display: block;
+                border-bottom: 1px solid #686864;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+
+        .sidebar-menu-link {
+            display: flex;
+            border-bottom: 1px solid #424240;
+            transition: all 0.2s;
+
+            .sidebar-link-icon {
+                font-size: 14px;
+                color: #f9f9f9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.2s;
+                min-width: 40px;
+
+                .sidebar-avatar {
+                    height: 24px;
+                    width: 24px;
+                    background-size: cover !important;
+                    background-position: center !important;
+                    background-repeat: no-repeat !important;
+                    border-radius: 6px;
+                }
+            }
+
+            .sidebar-link-text {
+                font-size: 16px;
+                color: #f9f9f9;
+                padding: 8px 15px 8px 6px;
+                display: flex;
+                align-items: center;
+                flex: 1;
+                transition: all 0.2s;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .sidebar-collapse-container {
+        display: flex;
+        cursor: pointer;
+        margin-top: 25px;
+
+        .sidebar-collapse-icon-container {
+            font-size: 18px;
+            color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+            min-width: 40px;
+
+            span {
+                display: inline-block;
+                transition: all 0.2s;
+            }
+        }
+
+        .sidebar-collapse-icon-container-open {
+
+            span {
+                transform: rotate(180deg);
+            }
+        }
+
+        .sidebar-collapse-text-container {
+            font-size: 14px;
+            color: #f9f9f9;
+            padding: 8px 15px 8px 6px;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            transition: all 0.2s;
+            overflow: hidden;
+        }
+    }
+}
